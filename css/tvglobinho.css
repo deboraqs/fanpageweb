@@ -1,0 +1,27 @@
+.btn-sub {
+  margin-bottom: 10px;
+}
+
+form {
+  border-bottom: 2px solid #546e7a;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+.img-prin {
+  width: 100%;
+    margin-left: 10%;
+    padding: 20px;
+    margin-top: 10%;
+}
+.img-ap {
+  width: 30%;
+    padding: 20px;
+    margin-left: 30%;
+}
