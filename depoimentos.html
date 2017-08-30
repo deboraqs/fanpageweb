@@ -1,77 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>TV Globinho - Depoimentos</title>
-      <link rel="shortcut icon" href="imagens/globo-icon-3.png" type="image/x-icon"/>
-    <link rel="stylesheet" type="text/css" href="css/tvglobinho.css">
+<head>
+  <meta charset="utf-8">
+  <title>TV Globinho - Depoimentos</title>
+  <link rel="shortcut icon" href="imagens/globo-icon-3.png" type="image/x-icon"/>
+  <link rel="stylesheet" type="text/css" href="css/tvglobinho.css">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="js/depoimentos.js"></script>
-  </head>
-  <body ng-app="TVGlobinho" ng-controller="DepoimentosController">
-      <header>
-          <div class="navbar-fixed">
-            <nav class="orange darken-4">
-                <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo right">TV GLOBINHO</a>
-                <ul id="nav-mobile" class="left hide-on-med-and-down">
-                    <li>
-                        <a href="index.html">INÍCIO</a>
-                    </li>
-                    <li>
-                        <a href="desenhos.html">DESENHOS</a>
-                    </li>
-                    <li class="active">
-                        <a href="depoimentos.html">DEPOIMENTOS</a>
-                    </li>
-                    <li>
-                        <a href="aovivo.html">TV AO VIVO</a>
-                    </li>
-                     <li>
-                        <a href="anti-fatima.html">FORA FÁTIMA</a>
-                    </li>
-                </ul>
-                </div>
-            </nav>
-          </div>
-        </header>
-    <main class="container">
-        <h4 class="center grey-text text-darken-4">Depoimentos</h4>
-        <div class="divider"></div>
-      <form>
-        <div class="input-field">
-          <input ng-model="item.nome" type="text">
-          <label for="nome">Nome</label>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-cookies.js"></script>
+  <script src="js/depoimentos.js"></script>
+</head>
+<body ng-app="TVGlobinho" ng-controller="DepoimentosController">
+  <header>
+    <div class="navbar-fixed">
+      <nav class="orange darken-4">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo right">TV GLOBINHO</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li>
+              <a href="index.html">INÍCIO</a>
+            </li>
+            <li>
+              <a href="desenhos.html">DESENHOS</a>
+            </li>
+            <li class="active">
+              <a href="depoimentos.html">DEPOIMENTOS</a>
+            </li>
+            <li>
+              <a href="aovivo.html">TV AO VIVO</a>
+            </li>
+            <li>
+              <a href="anti-fatima.html">FORA FÁTIMA</a>
+            </li>
+          </ul>
         </div>
-        
-        <div class="input-field">
-          <textarea ng-model="item.depoimento" class="materialize-textarea"></textarea>
-          <label for="depoimento">Depoimento</label>
-        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h4 class="center grey-text text-darken-4">Depoimentos</h4>
+    <div class="divider"></div>
+    <form>
+      <div class="input-field">
+        <input ng-model="item.nome" type="text">
+        <label for="nome">Nome</label>
+      </div>
 
-        <button class="btn-sub btn waves-effect waves-light orange darken-4" type="submit" name="action" ng-click="adicionarDepoimento()">Enviar<i class="material-icons right">send</i></button>
-      </form>
+      <div class="input-field">
+        <textarea ng-model="item.depoimento" class="materialize-textarea"></textarea>
+        <label for="depoimento">Depoimento</label>
+      </div>
 
-      <article class="card orange darken-4" ng-repeat="d in depoimentos">
-        <div class="card-content white-text">
-          <p class="card-title">{{d.nome}}</p>
-          <p>{{d.depoimento}}</p>
-        </div>
-      </article>
-    </main>
-    <footer class="page-footer white">
-          <div class="footer-copyright">
-            <div class="container grey-text text-darken-4">
-            © 2017 Fan Page - TV Globinho - Débora Queiroz, Gustavo Vilar, Lucas Martins, Nathan Andrade e Raphael Victor
-            <a class="grey-text text-darken-4 right" href="#!">Mais Links</a>
-            </div>
-          </div>
-        </footer>
-  </body>
+      <button class="btn-sub btn waves-effect waves-light orange darken-4" type="submit" name="action" ng-click="adicionarDepoimento()">Enviar<i class="material-icons right">send</i></button>
+    </form>
+
+    <article class="card orange darken-4" ng-repeat="d in depoimentos">
+      <div class="card-content white-text">
+        <p class="card-title">{{d.nome}}</p>
+        <p>{{d.depoimento}}</p>
+      </div>
+    </article>
+  </main>
+  <footer class="page-footer white">
+    <div class="footer-copyright">
+      <div class="container grey-text text-darken-4">
+        © 2017 Fan Page - TV Globinho - Débora Queiroz, Gustavo Vilar, Lucas Martins, Nathan Andrade e Raphael Victor
+        <a class="grey-text text-darken-4 right" href="#!">Mais Links</a>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
